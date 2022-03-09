@@ -12,21 +12,17 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.annotation.WebFilter;
-
-
 /**
- * @author <a href="mailto:likelovec@gmail.com">fzdwx</a>
- * @date 2022/3/7 20:12
+ * @author <a href="mailto:likelovec@gmail.com">韦朕</a>
+ * @date 2022/3/9 11:25
  */
-@WebFilter(urlPatterns = "/*")
 @SpringBootApplication
 @RestController
 @Slf4j
-public class Serv {
+public class App {
 
     public static void main(String[] args) {
-        final ConfigurableApplicationContext ctx = SpringApplication.run(Serv.class, args);
+        final ConfigurableApplicationContext ctx = SpringApplication.run(App.class, args);
         new Thread(TtlRunnable.get(() -> {
             for (; ; ) {
                 try {

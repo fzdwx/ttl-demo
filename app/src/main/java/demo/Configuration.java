@@ -39,7 +39,7 @@ public class Configuration {
         }.addInclude("/**")
                 .setBeforeAuth(o -> {
                     // init context
-                    final var request = getHttpServletRequest();
+                    final HttpServletRequest request = getHttpServletRequest();
                     Context.request(request);
                     Context.traceId(request.getHeader(Context.TRACER_ID));
                 });

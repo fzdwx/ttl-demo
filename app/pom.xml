@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>serv</artifactId>
+    <artifactId>app</artifactId>
 
     <dependencies>
         <dependency>
@@ -39,5 +39,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
