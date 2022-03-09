@@ -52,6 +52,6 @@ public class App {
 
     @GetMapping("/test")
     public void test() throws InterruptedException {
-        System.out.println("controller: " + Thread.currentThread().getName() + " --- " + Context.traceId());
+        log.info("controller: " + Thread.currentThread().getName() + " --- " + Context.traceId());
     }
 }

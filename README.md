@@ -15,3 +15,6 @@ steps:
 2. start app
 3. curl http://localhost:8888/app/test
 4. 看 app 服务的日志
+
+
+![img.png](img.png)
