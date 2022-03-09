@@ -23,14 +23,16 @@ public class App {
 
     public static void main(String[] args) {
         final ConfigurableApplicationContext ctx = SpringApplication.run(App.class, args);
+
+        // test
         new Thread(TtlRunnable.get(() -> {
             for (; ; ) {
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("----------------------------" + Context.traceId());
+                System.out.println("test thread ---------------------------- " + Context.traceId());
             }
         })).start();
     }
@@ -48,7 +50,7 @@ public class App {
         }
     }
 
-    @GetMapping
+    @GetMapping("/test")
     public void test() throws InterruptedException {
         System.out.println("controller: " + Thread.currentThread().getName() + " --- " + Context.traceId());
     }

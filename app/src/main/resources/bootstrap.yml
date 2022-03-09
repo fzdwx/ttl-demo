@@ -1,6 +1,6 @@
 spring:
   application:
-    name: demo-serv
+    name: app
   cloud:
     nacos:
       config:
@@ -17,3 +17,5 @@ rocketmq:
   name-server: 192.168.1.227:9876
   producer:
     group: operate-group
+server:
+  port: 7777

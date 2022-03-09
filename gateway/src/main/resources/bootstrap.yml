@@ -19,7 +19,10 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: demo-1
-          uri: lb://demo-serv
+        - id: app
+          uri: lb://app
           predicates:
-            - Path=/ttt
+            - Path=/app/**
+
+server:
+  port: 8888

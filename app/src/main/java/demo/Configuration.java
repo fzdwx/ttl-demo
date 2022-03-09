@@ -34,6 +34,7 @@ public class Configuration {
                 } finally {
                     // 清除上下文
                     Context.clear();
+                    log.error("context clear finish");
                 }
             }
         }.addInclude("/**")
