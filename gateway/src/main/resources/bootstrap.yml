@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: demo-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.1.228:8848
+        namespace: 9e34e9d3-0507-49ef-a6da-168d2816712f
+        group: dev
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: 192.168.1.228:8848
+        group: dev
+        namespace: 9e34e9d3-0507-49ef-a6da-168d2816712f
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: demo-1
+          uri: lb://demo-serv
+          predicates:
+            - Path=/ttt
